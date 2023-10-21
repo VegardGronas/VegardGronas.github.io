@@ -108,4 +108,17 @@ li {
     order: 2; /* Adjust the order to move it to the bottom */
 }
 
+@media (max-width: 768px) {
+    .players {
+        flex-wrap: wrap; /* Allow players to wrap to the next row on larger screens */
+    }
 
+    .player {
+        flex-basis: calc(33.33% - 1rem); /* Calculate the width to fit three players in a row */
+        margin-right: 1rem;
+    }
+
+    .player:last-child {
+        margin-right: 0; /* Remove the right margin for the last player in a row */
+    }
+}

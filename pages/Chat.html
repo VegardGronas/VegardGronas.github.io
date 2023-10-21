@@ -1,0 +1,136 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles/main.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+
+        .room-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .avatar {
+            width: 150px;
+            height: 150px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            margin: 20px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .avatar img {
+            max-width: 90%;
+            height: auto;
+        }
+
+        .avatar-name {
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        .chat-container {
+            width: 100%;
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 10px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .chat-messages {
+            max-height: 200px;
+            overflow-y: auto;
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .chat-input {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+        }
+
+        .message-input {
+            flex: 1;
+            padding: 5px;
+        }
+
+        .send-button {
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="nav-bar">
+            <div class="nav-links">
+                <a href="/pages/HomePage.html">Home</a>
+                <a href="/pages/Events.html">Events</a>
+                <a href="/pages/Chat.html">Chat</a>
+                <a href="/pages/Tasks.html">Tasks</a>
+                <a href="/pages/Achievements.html">Achievements</a>
+                <a href="/pages/ProgressionOverview.html">Progression</a>
+                <a href="/pages/TheGame.html">Game</a>
+            </div>
+            <div class="nav-other">
+                <div class="user-level">
+                    <p>Level: 5</p>
+                    <p>XP to next level: 10</p>
+                </div>
+                <img src="/icons/🦆 icon _notification_.png" alt="">
+                <a href="/index.html">
+                    <img src="/avatars/You.jpg" alt="Click to open index.html">
+                </a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="room-container">
+            <div class="avatar">
+                <img src="/avatars/25f8c8f4-1d51-4470-abce-d74df2368c4a.jpg" alt="Avatar 1">
+                <div class="avatar-name">MysticDragon</div>
+            </div>
+            <div class="avatar">
+                <img src="/avatars/0e1beccf-8ed3-4cb3-b07a-7b98749ddfd1.jpg" alt="Avatar 2">
+                <div class="avatar-name">RubyRider</div>
+            </div>
+            <div class="avatar">
+                <img src="/avatars/5c2851ab-56ff-4750-a010-19690d48926d.jpg" alt="Avatar 3">
+                <div class="avatar-name">PippinAdventures</div>
+            </div>
+            <div class="avatar">
+                <img src="/avatars/b212d0b5-632c-4591-b79b-3a965a55117a.jpg" alt="Avatar 4">
+                <div class="avatar-name">DreamCatcher</div>
+            </div>
+        </div>
+        <div class="chat-container">
+            <div class="chat-messages">
+                <div class="message">
+                    <strong>MysticDragon:</strong> Hello, how's everyone doing?
+                </div>
+                <!-- Add more preset messages here -->
+            </div>
+            <div class="chat-input">
+                <input type="text" class="message-input" placeholder="Type your message...">
+                <button class="send-button">Send</button>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

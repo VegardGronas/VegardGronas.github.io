@@ -1,0 +1,124 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles/main.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        main {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+        section {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: center;
+        }
+        section > div
+        {
+            text-align: left;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        p {
+            margin: 10px 0;
+        }
+        .section-divider {
+            display: block;
+            height: 2px; /* Adjust the height as needed */
+            background-color: #000; /* Adjust the color as needed */
+            margin: 10px 0; /* Adjust the margin as needed to control spacing */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="nav-bar">
+            <div class="nav-links">
+                <a href="/pages/HomePage.html">Home</a>
+                <a href="/pages/Events.html">Events</a>
+                <a href="/pages/Chat.html">Chat</a>
+                <a href="/pages/Tasks.html">Tasks</a>
+                <a href="/pages/Achievements.html">Achievements</a>
+                <a href="/pages/ProgressionOverview.html">Progression</a>
+                <a href="/pages/TheGame.html">Game</a>
+            </div>
+            <div class="nav-other">
+                <div class="user-level">
+                    <p>Level: 5</p>
+                    <p>XP to next level: 10</p>
+                </div>
+                <img src="/icons/🦆 icon _notification_.png" alt="">
+                <a href="/index.html">
+                    <img src="/avatars/You.jpg" alt="Click to open index.html">
+                </a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <div>
+                <h2>Home Screen</h2>
+                <p>The home screen will show what quests or tasks the player have selected and should work on, as well as the current events they are a part of, and recent achievements aquired and lastly the guild which is the peers in the course.</p>
+                <img src="/Planning/HomeScreen.png" alt="">
+            </div>
+        </section>
+        <section>
+            <div>
+                <h2>Group Chat</h2>
+                <p>The group chat will be related to the tasks that players can gain xp on. These events would be to join a group and discuss a theme, or work on a task together. Other than that the chat could also be uses as a place to just chat and have fun together.</p>
+                <img src="/Planning/GroupChat.png" alt="">
+            </div>
+        </section>
+        <section>
+            <div>
+                <h2>Events</h2>
+                <p>The events page will show current available events, these events are created by the players and will be mostly realted to the duel part of the game.</p>
+                <img src="/Planning/Events.png" alt="">
+            </div>
+        </section>
+        <section>
+            <div>
+                <h2>Achievements</h2>
+                <p>The achievements page will be a list of all the aqured achievements for the player.</p>
+                <img src="/Planning/Achievements.png" alt="">
+            </div>
+        </section>
+        <section>
+            <div>
+                <h2>Tasks</h2>
+                <p>The tasks page are split up into three sections, so that the player can see what tasks are meant as assignments, lectures or discussions. The circle with the arrow are there to show the player they can click on it, and on a frinal product this would explain the task in detail, and make sure the task are added to the players list and updated when completeded to add xp to the character for progressiion.</p>
+                <img src="/Planning/Tasks.png" alt="">
+            </div>
+        </section>
+        <section>
+            <h2>Duels</h2>
+            <div>
+                <p>
+                    In this game, players within the dungeon are represented by images positioned in the lower left corner, while the dungeon master resides in the upper right corner. When the game commences, the first player is presented with a question from the dungeon master. The player's response hinges on the spells they've acquired through the level system. For instance, if the dungeon master poses a question related to brainstorming, the player must choose from their acquired spells to provide an answer. If the response is correct, the game proceeds to the next player. However, an incorrect answer results in the entire group losing health.
+                </p>    
+                <span class="section-divider"></span>
+            </div>
+            <div>
+                <p>During planning the idea was that players could select a category they world focus on. However, after working more it made more sense to allow every category that the players have available to their character, so that the level difference and knowledge learned would be of value druing the duel.</p>
+                <img src="/Planning/Before1v1.png" alt="">
+            </div>
+            <div>
+                <p>This image illustrate the idea of how the  gameplay would work. "User 1" are in this case the one asking a question. The question are from the spells they have aquired through leveling. In the left lower corner "you" as the player can select answers for the question from the list of aquired spells.</p>
+                <img src="/Planning/1v1Duel.png" alt="">
+            </div>
+            <div>
+                <p>This last image show how a dungeon would work, here there are a group of 5 peers that follow the same gameplay as it would be to challange eachother. Howeveer, now the questions are asked by a AI or premade dugeonmaster.<br><br> The round start with the most left player, and advances to the next after they have answered.</p>
+                <img src="/Planning/Dungeon.png" alt="">
+            </div>
+        </section>
+    </main>
+</body>
+</html>

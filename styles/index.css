@@ -52,7 +52,7 @@ p {
 
 /* Style for the overlay content */
 #overlay-content {
-    background-color: #fff;
+    background-color: var(--primary-color);
     margin: 15% auto;
     padding: 20px;
     width: 60%;

@@ -15,6 +15,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    margin: 10px;
 }
 
 .dungeon-master, .player {
@@ -104,7 +105,7 @@ li {
 .dungeon-master {
     text-align: center;
     padding: 1rem;
-    order: 2; /* Adjust the order to move it to the bottom */
+    order: 0; /* Adjust the order to move it to the bottom */
 }
 
 @media (max-width: 768px) {

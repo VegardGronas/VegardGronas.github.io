@@ -1,9 +1,10 @@
 :root {
-    --primary-color: #66f3c4; /* Main color (blue) */
-    --secondary-color: #413939; /* Secondary color (white) */
+    --primary-color: #768385; /* Main color (blue) */
+    --secondary-color: #d8d8d8; /* Secondary color (white) */
     --accent-color: #9b4930; /* Accent color (orange) */
-    --background-color: #ffab91;
+    --background-color: #4d4d4d;
     --btnhover-color: #18a72b;
+    --header-color: #a1b9fc;
 }
 
 * {
@@ -11,8 +12,14 @@
 }
 
 h1, h2, h3 {
+    color: var(--header-color);
     font-family: 'Tilt Neon', sans-serif;
     font-family: 'Wix Madefor Display', sans-serif;
+}
+
+p
+{
+    color: var(--secondary-color);
 }
 
 body {
@@ -160,6 +167,7 @@ body {
 .content-box p {
     font-size: 1rem;
     margin: 0;
+    text-align: left;
 }
 
 .content-box img {

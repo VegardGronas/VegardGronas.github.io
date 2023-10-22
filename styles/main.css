@@ -116,6 +116,7 @@ body {
     margin: 1rem;
     display: flex;
     gap: 10px;
+    justify-content: center;
 }
 
 .content {
@@ -174,4 +175,11 @@ body {
 /* Style for the image container */
 .image-container {
     cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .horizontal-grid
+    {
+        flex-direction: column;
+    }
 }

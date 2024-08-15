@@ -16,12 +16,13 @@ function start() {
     bird = new GameObject(new Vector2(50, canvas.height / 2 - 100), new Vector2(50, 50));
     ground = new GameObject(new Vector2(0, canvas.height - 100), new Vector2(canvas.width, 200));
 
-    wall = new Wall(new Vector2(canvas.width - 100, 0), new Vector2(50, 200));
-
     ground.tag = "obstacle";
 
+    wall = new Wall(new Vector2(canvas.width - 100, 300), new Vector2(50, 100), 200);
+
     gameObjects.push(ground);
-    gameObjects.push(wall);
+    gameObjects.push(wall.upperWall);
+    gameObjects.push(wall.lowerWall);
 
     ground.setColor(new Vector3(150, 255, 200));
 
@@ -39,12 +40,13 @@ function update(currentTime) {
     }
     lastTime = currentTime;
 
-    ground.draw();
-
     wall.draw();
     wall.update(deltaTime);
 
+    ground.draw();
+
     bird.draw();
+    
 
     for(let i = 0; i < gameObjects.length; i++)
     {

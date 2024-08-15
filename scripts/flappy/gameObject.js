@@ -11,8 +11,8 @@ class GameObject {
         // Movement variables
         this.velocity = new Vector2(0, 0); // Default no movement
         this.isGrounded = false;
-        this.gravity = 500;
-        this.jumpStrength = 350;
+        this.gravity = 300;
+        this.jumpStrength = 200;
     }
 
     draw() {
@@ -23,6 +23,11 @@ class GameObject {
     move(vector) {
         this.position.x += vector.x;
         this.position.y += vector.y;
+    }
+
+    smoothMove(vector, deltaTime) {
+        this.position.x += vector.x * deltaTime;
+        this.position.y += vector.y * deltaTime;
     }
 
     setColor(color) {
@@ -56,19 +61,60 @@ class GameObject {
     }
 }
 
-class Wall extends GameObject {
-    constructor(position = new Vector2(0, 0), scale = new Vector2(50, 200)) {
-        super(position, scale, "wall");
+class Wall {
+    constructor(position = new Vector2(0, 0), scale = new Vector2(50, 200), gapSize = 100) {
+        this.gap = gapSize;
+        this.wallWidth = scale.x;
+        this.wallHeight = scale.y;
+
+        // Initialize the position of the wall segments
+        this.resetPosition(position);
+        
         this.velocity = new Vector2(-100, 0); // Move left at 100 units per second
     }
 
-    // Update position based on velocity
-    update(deltaTime) {
-        this.updatePosition(deltaTime);
+    resetPosition(position) {
+        // Reset the upper wall segment
+        this.upperWall = new GameObject(
+            new Vector2(position.x, 0), // Start at the top
+            new Vector2(this.wallWidth, position.y) // Height from the top to the gap
+        );
+        this.upperWall.setColor(new Vector3(0, 255, 0)); // Color for the upper wall
 
-        // If wall is off-screen, you might want to reset or remove it
-        if (this.position.x + this.scale.x < 0) {
-            // Handle wall going off-screen
+        // Reset the lower wall segment
+        this.lowerWall = new GameObject(
+            new Vector2(position.x, position.y + this.gap), // Position below the gap
+            new Vector2(this.wallWidth, canvas.height - (position.y + this.gap)) // Height from the gap to the bottom
+        );
+        this.lowerWall.setColor(new Vector3(0, 255, 0)); // Color for the lower wall
+    }
+
+    update(deltaTime) {
+        // Move both wall segments
+        this.upperWall.position.x += this.velocity.x * deltaTime;
+        this.lowerWall.position.x += this.velocity.x * deltaTime;
+
+        // Check if the wall is off-screen
+        if (this.upperWall.position.x + this.upperWall.scale.x < 0) {
+            // Reposition the wall and update the gap
+
+            this.velocity.x -= 10;
+
+            this.resetPosition(new Vector2(canvas.width, this.randomGapPosition()));
         }
+    }
+
+    // Randomly select a new position for the gap
+    randomGapPosition() {
+        // Ensure gap is not too close to the top or bottom
+        const minGapY = 100; // Minimum distance from the top
+        const maxGapY = canvas.height - this.wallHeight - this.gap - 100; // Maximum distance from the bottom
+
+        return Math.random() * (maxGapY - minGapY) + minGapY;
+    }
+
+    draw() {
+        this.upperWall.draw();
+        this.lowerWall.draw();
     }
 }

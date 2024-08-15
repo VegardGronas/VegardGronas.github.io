@@ -7,45 +7,56 @@
     <link rel="stylesheet" href="/styles/main.css">
 </head>
 <body>
-    <header>
-        <h1>Vegard Grønås</h1>
-        <nav>
-            <ul>
-                <li><a href="#about">Om Meg</a></li>
-                <li><a href="#projects">Prosjekter</a></li>
-                <li><a href="#contact">Kontakt</a></li>
-            </ul>
-        </nav>
-    </header>    
-    
-    <main>
-        <section id="about">
-            <h2>Om Meg</h2>
-            <p>Jeg er en kreativ person, og liker det meste innen spill produksjon (programmering, lyd design, musikk produksjon, 3D objekt laging osv..) til web development eller bare tilfeldige prosjekter med JS (Node) eller andre programmeringsspråk for læring eller fritid mens jeg ser på ting online.</p>
-            <p>Jeg har studert Multimedia og teknologi design, så jeg har et ganske spredt område av kunnskap, og kan være vanskelig å spisse inn spesifikt hva jeg holder på med til vanlig. Det meste er spennende så lenge det er et prosjekt som går fremover og har et mål eller en hensikt.</p>
-        </section>
-        
-        <section id="projects">
-            <h2>Prosjekter</h2>
-            <p>Her finner du linker til noen av mine prosjekter:</p>
-            <ul>
-                <li><a href="https://github.com/VegardGronas/UnityFun.git" target="_blank">Prosjekt 1</a></li>
-                <li><a href="https://github.com/yourusername/project2" target="_blank">Prosjekt 2</a></li>
-                <li><a href="https://github.com/yourusername/project3" target="_blank">Prosjekt 3</a></li>
-                <!-- Add more projects as needed -->
-            </ul>
-        </section>
-        
-        <section id="contact">
-            <h2>Kontakt</h2>
-            <p>Du kan nå meg via e-post: <a href="mailto:vegagro@gmail.com">vegagro@gmail.com</a></p>
-        </section>
-    </main>
+    <portfolio-header 
+        image-src="images/Placeholders/profilePicture.png" 
+        name="Vegard Grønås" 
+        description="Jeg har studert multimedia ved Univertsitetet i Agder.">
+    </portfolio-header>
 
-    <footer>
-        <p>&copy; 2024 Vegard Grønås. All rights reserved.</p>
-    </footer>
+    <project-grid>
+        <project-card title="Github">
+            <project-item 
+                name="Unity Fun" 
+                description="Jeg utvikler en Unity-pakke som inneholder ferdigkonfigurerte Third-Person og First-Person spillmoduser. Formålet med pakken er å gjøre det enklere og raskere å implementere disse spillmodusene i nye prosjekter, samtidig som jeg har det gøy og lærer mer om spillutvikling underveis."
+                link="https://github.com/VegardGronas/UnityFun.git"
+                image-src="images/Placeholders/place1.png">
+            </project-item>
+        </project-card>
     
-    <script src="/scripts/script.js"></script>
+        <project-card title="Javascript">
+            <project-item 
+                name="Sorting" 
+                description="Enkle funksjoner i JS som sorteres ord"
+                link="sorting.html"
+                image-src="images/Placeholders/place1.png">
+            </project-item>
+        </project-card>
+
+        <project-card title="JS Canvas">
+            <project-item 
+                name="Flappy Bird" 
+                description="Simpelt Flappy Bird spill laget for gøy"
+                link="flappy.html"
+                image-src="images/Placeholders/place1.png">
+            </project-item>
+        </project-card>
+        <project-card title="Github">
+            <project-item 
+                name="Unity Fun" 
+                description="A fun project using Unity for game development."
+                link="https://github.com/VegardGronas/UnityFun.git"
+                image-src="images/Placeholders/place1.png">
+            </project-item>
+        </project-card>
+    </project-grid>
+    
+    <project-card title="Kontakt">
+        <section id="contact">
+            <p>Du kan nå meg via e-post: <a href="mailto:vegagro@gmail.com">vegagro@gmail.com</a></p>
+            <p>Github: <a href="https://github.com/VegardGronas">Github</a></p>
+        </section>
+    </project-card>
+
+    <script src="scripts/components.js"></script>
 </body>
 </html>

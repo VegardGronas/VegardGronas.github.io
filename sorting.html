@@ -1,0 +1,74 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .container {
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 300px;
+            text-align: center;
+        }
+
+        /* Style for the input field */
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #cccccc;
+            border-radius: 4px;
+            font-size: 16px;
+            box-sizing: border-box;
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+
+        input[type="text"]::placeholder {
+            color: #888888;
+        }
+
+        /* Style for the input field on focus */
+        input[type="text"]:focus {
+            border-color: #007bff;
+            box-shadow: 0 0 8px rgba(0, 123, 255, 0.25);
+            outline: none;
+        }
+
+        /* Style for the display text */
+        #display-text {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #333333;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <label for="input-value">Enter text:</label>
+        <input type="text" id="input-value" oninput="GetInputValue()" placeholder="Type something...">
+        <p id="display-text">The input value will appear here.</p>
+    </div>
+
+    <project-grid>
+        <div style="background-color: antiquewhite; text-align: center;">
+            <h1>Start with</h1>
+            <div id="output-word-startswith">
+                
+            </div>
+        </div>
+    
+        <div style="background-color: antiquewhite; text-align: center;">
+            <h1>Includes</h1>
+            <div id="output-word-includes">
+                
+            </div>
+        </div>
+    </project-grid>
+
+    <script src="/scripts/components.js"></script>
+    <script src="/scripts/sorting/main.js"></script>
+</body>
+</html>

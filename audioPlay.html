@@ -1,0 +1,73 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Musikk og lyd</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            min-height: 100%;
+        }
+        #canvas {
+            display: block;
+            background: black;
+            flex-grow: 1; /* Ensures canvas takes up remaining space */
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        select, button, audio {
+            margin: 10px;
+            padding: 10px;
+            font-size: 16px;
+        }
+        .ambient-image
+        {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: 20%;
+        }
+        .home
+        {
+            padding: 20px;
+            position: absolute;
+            background-color: white;
+        }
+        #audio {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="canvas"></canvas>
+    
+    <img id="ambi-background" class="ambient-image" src="images/Placeholders/amb.jpg" alt="">
+
+    <footer>
+        <select id="songSelect">
+            <option value="">Velg en sang</option>
+        </select>
+        <audio id="audio" controls></audio>
+    </footer>
+
+    <div class="home">
+        <a href="index.html">Hjem</a>
+    </div>
+
+    <script src="scripts/musicFun/main.js"></script>
+</body>
+</html>

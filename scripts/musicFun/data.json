@@ -1,0 +1,56 @@
+[
+    {
+        "name": "When you get a whammy",
+        "genre": "Guitar",
+        "link": "music/StrangeLife.wav",
+        "img": "images/music/Placeholder.png"
+    },
+    {
+        "name": "Random Synth",
+        "genre": "SynthWave",
+        "link": "music/FerdigM.wav",
+        "img": "images/music/Placeholder.png"
+    },
+    {
+        "name": "Game Box",
+        "genre": "Electronic",
+        "link": "music/GameBox.wav",
+        "img": "images/music/Placeholder.png"
+    },
+    {
+        "name": "ElgoLand",
+        "genre": "Electronic",
+        "link": "music/ElgoAlndM.wav",
+        "img": "images/music/Placeholder.png"
+    },
+    {
+        "name": "Lofi Rock",
+        "genre": "Lofi/Rock",
+        "link": "music/LofiTech.wav",
+        "img": "images/music/Placeholder.png"
+    },
+    {
+        "name": "Random Guitar",
+        "genre": "Guitar",
+        "link": "music/RandomGuitar.wav",
+        "img": "images/music/Placeholder.png"
+    },
+    {
+        "name": "Background Guitar",
+        "genre": "Background",
+        "link": "music/ChillRock_P.mp3",
+        "img": "images/music/Placeholder.png"
+    },
+    {
+        "name": "Dreaming",
+        "genre": "Cinematic",
+        "link": "music/Dreaming.wav",
+        "img": "images/music/Dreaming.png"
+    },
+    {
+        "name": "Kasset Gitar",
+        "genre": "Utkast",
+        "link": "music/Utkast.wav",
+        "img": "images/music/Placeholder.png"
+    }
+]

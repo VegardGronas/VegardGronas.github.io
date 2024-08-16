@@ -5,6 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vegard Grønås - Portfolio</title>
     <link rel="stylesheet" href="/styles/main.css">
+
+
+    <style>
+        .info
+        {
+            display: grid;
+            justify-content: center;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
     <portfolio-header 
@@ -13,8 +23,11 @@
         description="Jeg har studert multimedia ved Univertsitetet i Agder.">
     </portfolio-header>
 
-    <h1>Alt på denne siden er public på Github. Repo har samme navn som nettsiden</h1>
-
+    <div class="info">
+        <h1>Alt på denne siden er public på Github.</h1>
+        <p>Repo: <a href="https://github.com/VegardGronas/VegardGronas.github.io">VegardGronas.github</a></p>
+    </div>
+    
     <project-grid>
         <project-card title="Github">
             <project-item 

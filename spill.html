@@ -9,12 +9,42 @@
             margin: 0;
             padding: 0;
         }
+
+        .header
+        {
+            position: fixed; /* Sticks the div to the top of the page */
+            top: 0; /* Aligns it to the top */
+            left: 0; /* Aligns it to the left edge */
+            width: 100%; /* Makes it span the full width of the page */
+            background-color: #333; /* Background color */
+            color: white; /* Text color */
+            padding: 10px; /* Padding for some spacing */
+            box-shadow: 0 2px 5px rgba(0,0,0,0.3); /* Adds a slight shadow for depth */
+            z-index: 1000; /* Ensures it stays on top of other elements */
+        }
+        .menu
+        {
+            display: grid;
+            grid-template-columns: 100px auto;
+        }
+        a
+        {
+            color: white;
+        }
     </style>
 </head>
 <body>
-    <div class="home">
-        <a href="index.html">Hjem</a>
+
+    <div class="header">
+        <div class="menu">
+            <a href="index.html">Hjem</a>
+            <a href="/spill/flappyBird.html">Flappy Bird</a>    
+        </div>
     </div>
-    <a href="/spill/flappyBird.html">Flappy Bird</a>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="/scripts/games/mainPage/components.js"></script>
+    <script src="/scripts/games/mainPage/main.js"></script>
+    <script src="/scripts/games/mainPage/mesh.js"></script>
 </body>
 </html>

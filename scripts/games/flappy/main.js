@@ -38,8 +38,14 @@ function initializeGameObjects() {
     wall = [];
     gameObjects = [];
 
+    let wallCount = 4;
 
-    for (let i = 0; i < 4; i++) {
+    if(canvas.width > 1000)
+    {
+        wallCount = 7;
+    }
+
+    for (let i = 0; i < wallCount; i++) {
         // Initialize each wall with the correct position and spacing
         let w = new Wall(
             new Vector2(canvas.width + i * 300, Math.random() * (canvas.height - 400) + 100), // Random Y within range

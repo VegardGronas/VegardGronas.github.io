@@ -1,0 +1,23 @@
+{
+    "camera":{
+        "fov":45,
+        "near":0.1,
+        "far":10,
+        "position":[0, 0.5, 0]
+    },
+    "skybox":{
+        "path":"/images/skybox/sky.jpg"
+    },
+    "globalLight":{
+        "directionalLight":{
+            "enabled":true,
+            "color":"0xffffff",
+            "intensity":0.2,
+            "position":[5, 5, 5]
+        },
+        "ambientLight":{
+            "enabled":true,
+            "color":"0xffffff"
+        }
+    }
+}
